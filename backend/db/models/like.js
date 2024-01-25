@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
       },
-      followerId: {
+      storyId: {
         type: DataTypes.INTEGER,
         allowNull: false,
       },

@@ -5,11 +5,11 @@ module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {
       // define association here
-      User.hasMany(models.Story, {foreignKey: 'authorId' });
-      User.hasMany(models.Comment, {foreignKey: 'userId' });
-      User.hasMany(models.Like, {foreignKey: 'userId' });
-      User.hasMany(models.Follow, {foreignKey: 'followerId' });
-      User.hasMany(models.Follow, {foreignKey: 'userId' });
+      User.hasMany(models.Story, {foreignKey: 'authorId', onDelete: 'CASCADE', hooks: true });
+      User.hasMany(models.Comment, {foreignKey: 'userId', onDelete: 'CASCADE', hooks: true });
+      User.hasMany(models.Like, {foreignKey: 'userId', onDelete: 'CASCADE', hooks: true });
+      User.hasMany(models.Follow, {foreignKey: 'followerId', onDelete: 'CASCADE', hooks: true });
+      User.hasMany(models.Follow, {foreignKey: 'userId', onDelete: 'CASCADE', hooks: true });
     }
   };
 
