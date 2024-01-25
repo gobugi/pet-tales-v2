@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+.commentsDiv {
+  margin-left: 2%;
+  margin-right: 2%;
+  text-align:left;
+  position: relative;
+  top: 0px;
+  height: 600px;
+  left: 0px;
+  right: 0px;
+  /* min-width: 1346px; */  z-index: 900;
+  cursor: default;
+}
+
+
+.storyCommentsContainer {
+  position: absolute;
+  top: 0px;
+  margin-left: 0;
+  margin-right: 0;
+  height: 600px;
+  left: 0px;
+  /* right: 0px; */
+  z-index: 900;
+  text-align: left;
+}
+
+
+.storyCommentsContainer {
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.storyCommentsTable {
+  text-align: left;
+  width: 80%;
+
+}
+
+.storyCommentsTitle {
+  font-family: 'Playfair Display', serif;
+  font-weight: 550;
+  font-size: 47px;
+  font-style: italic;
+  color: #2B5292;
+  margin-top: 0px;
+  margin-bottom: 50px;
+}
+
+
+.storyCommentTitle {
+  float: left;
+  font-family: 'Playfair Display', serif;
+  font-weight: 550;
+  font-size: 33px;
+  color: #2B5292;
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+
+
+#storyCommentAuthor {
+  float: left;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  margin-left: 15px;
+  margin-bottom: 3px;
+  text-decoration: none;
+}
+
+
+#storyCommentAuthor:link {
+  color: black;
+}
+#storyCommentAuthor:visited {
+  color: black;
+}
+
+
+
+#storyCommentBody {
+  float: left;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  margin-left: 15px;
+}
+
+.storyCommentTable {
+  margin: 35px 0;
+  border-top: #2B5292;
+  width: 490px;
+  border-bottom-width: 0;
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+.circleButton:active {
+  visibility: hidden;
+}
+
+#storyCommentsHeader {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #2B5292;
+  margin-left: 10px;
+  font-style: italic;
+  margin-bottom: 45px;
+  margin-top: 80px;
+}
+
+.commentFormDiv {
+  position: relative;
+  text-align:right;
+  left: 0px;
+  right: 0px;
+  margin-right: 594px;
+  margin-top: -80px;
+  cursor: default;
+}
+
+textarea {
+  height: 60px;
+  flex: 0 0 300px;
+  margin-left: 10px;
+  background-color: #EFEFEF;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+textarea:focus {
+  outline: none !important;
+}
+
+button {
+  font-family: 'Playfair Display', serif;
+  font-weight: 550;
+  font-size: 20px;
+  background-color: #EFEFEF;
+  color: #2B5292;
+  margin-top: 15px;
+  border-radius: 8px;
+  height: 33px;
+  width: fit-content;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.fa-plus-circle:hover {
+  cursor: pointer;
+}
+
+#newComment {
+  font-weight: 100;
+  font-size: 25px;
+  position: absolute;
+  margin-top: 2px;
+  margin-left: 15px;
+}

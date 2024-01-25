@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;1,100&family=Roboto+Slab:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap');
+
+
+.container {
+  margin-left: 0;
+  margin-right: 0;
+  text-align:left;
+  position: relative;
+  top: 134px;
+  height: 600px;
+  left: 0px;
+  right: 0px;
+  min-width: 1346px;
+  z-index: 900;
+}
+
+.darkOverlay {
+  margin-left: 0;
+  margin-right: 0;
+  text-align:left;
+  position: absolute;
+  height: 600px;
+  left: 0px;
+  right: 0px;
+  background: linear-gradient(to left, transparent, #160d0da2);
+}
+
+#line1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 550;
+  color: #EFEFEF;
+  font-size: 100px;
+  text-align: left;
+  padding: 0px;
+  margin-top: 120px;
+  margin-left: 30px;
+}
+
+#line2 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 100;
+  color: #EFEFEF;
+  font-size: 60px;
+  text-align: left;
+  padding: 0px;
+  font-style: italic;
+  margin-left: 125px;
+}
+
+#line1:hover {
+cursor: default;
+}
+
+#line2:hover {
+  cursor: default;
+  }
+
+.homeStoriesContainer {
+  margin-left: 0;
+  margin-right: 0;
+  text-align:left;
+  position: relative;
+  top: 134px;
+  height: 600px;
+  left: 0px;
+  right: 0px;
+  min-width: 1346px;
+  z-index: 900;
+}
+
+.storyImages {
+  width: 500px;
+
+  background-color: #EFEFEF;
+}
+
+
+.homeStoriesContainer {
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.homeStoriesTable {
+  text-align: left;
+  width: 80%;
+
+}
+
+.homeStoriesTitle {
+  font-family: 'Playfair Display', serif;
+  font-weight: 550;
+  font-size: 47px;
+  font-style: italic;
+  color: #2B5292;
+  margin: 130px 0;
+}
+
+.homeStoriesTitle:hover {
+  cursor: default;
+}
+
+.homeStoryTitle {
+  float: left;
+  font-family: 'Playfair Display', serif;
+  font-weight: 550;
+  font-size: 33px;
+  color: #2B5292;
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+
+.homeStoryAuthor {
+  float: left;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  margin-left: 15px;
+  margin-bottom: 3px;
+}
+
+.homeStoryAuthor:link {
+  color: black;
+}
+.homeStoryAuthor:visited {
+  color: black;
+}
+
+.homeStoryBody {
+  float: left;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  margin-left: 15px;
+}
+
+.homeStoryBody:hover {
+  cursor: default;
+}
+
+.homeStoryTable {
+  margin: 5px 0;
+}

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+.formContainer {
+  margin-left: 0;
+  margin-right: 0;
+  position: fixed;
+  text-align: center;
+  top: 134px;
+  left: 0px;
+  right: 0px;
+  height: 100%;
+  z-index: 900;
+  background: linear-gradient(to bottom, transparent, #2B5292),
+  url("https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1700&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #EFEFEF;
+  font-family: 'Playfair Display', serif;
+  font-weight: 550;
+  font-size: 20px;
+}
+
+
+form {
+  text-align:right;
+  width: 500px;
+  margin-left: 40%;
+  margin-top: 110px;
+}
+
+label {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  text-align: right;
+  width: 500px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+input {
+  height: 20px;
+  flex: 0 0 300px;
+  margin-left: 10px;
+  background-color: #EFEFEF;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+textarea {
+  height: 60px;
+  flex: 0 0 300px;
+  margin-left: 10px;
+  background-color: #EFEFEF;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+button {
+  font-family: 'Playfair Display', serif;
+  font-weight: 550;
+  font-size: 20px;
+  background-color: #EFEFEF;
+  color: #2B5292;
+  margin-top: 15px;
+  border-radius: 8px;
+  height: 33px;
+  width: fit-content;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+}

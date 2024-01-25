@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100;1,100&family=Roboto+Slab:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&display=swap');
+
+
+.profileDiv {
+  margin-left: 0;
+  margin-right: 0;
+  top: 0;
+  text-align:left;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  min-width: 1346px;
+  z-index: 900;
+}
+
+.profileBanner {
+  margin-left: 0;
+  margin-right: 0;
+  text-align:left;
+  position: relative;
+  height: 600px;
+  left: 0px;
+  right: 0px;
+  min-width: 1346px;
+  z-index: 900;
+}
+
+/* .bannerDarkOverlay {
+  margin-left: 0;
+  margin-right: 0;
+  text-align:left;
+  position: absolute;
+  height: 462px;
+  left: 0px;
+  right: 0px;
+  background: linear-gradient(to right, transparent, #160d0d9d);
+} */
+
+#welcome {
+  font-family: 'Playfair Display', serif;
+  font-weight: 550;
+  color: #EFEFEF;
+  font-size: 100px;
+  float: right;
+  margin-right: 200px;
+  padding: 0px;
+  margin-top: 215px;
+}
+
+#welcome:hover {
+  cursor: default;
+}
+
+#profileBannerUser {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 100;
+  color: #EFEFEF;
+  font-size: 60px;
+  float: right;
+  margin-right: -133px;
+  padding: 0px;
+  font-style: italic;
+  padding: 0px;
+  margin-top: 350px;
+}
+
+#profileBannerUser:hover {
+  cursor: default;
+}
+
+
+.profileStoriesContainer {
+  margin-left: 0;
+  margin-right: 0;
+  text-align:left;
+  position: relative;
+  top: 134px;
+  height: 600px;
+  left: 0px;
+  right: 0px;
+  min-width: 1346px;
+  z-index: 900;
+}
+
+
+.profileStoriesContainer {
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profileStoriesTable {
+  text-align: left;
+  width: 80%;
+
+}
+
+.profileStoriesTitle {
+  font-family: 'Playfair Display', serif;
+  font-weight: 550;
+  font-size: 47px;
+  font-style: italic;
+  color: #2B5292;
+  margin-top: -80px;
+  margin-bottom: 40px;
+}
+
+.profileStoriesTitle:hover {
+  cursor: default;
+}
+
+.profileStoryTitle {
+  float: left;
+  font-family: 'Playfair Display', serif;
+  font-weight: 550;
+  font-size: 33px;
+  color: #2B5292;
+  margin-left: 15px;
+  margin-bottom: 5px;
+}
+
+.profileStoryAuthor {
+  float: left;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  margin-left: 15px;
+  margin-bottom: 3px;
+}
+
+.profileStoryAuthor:link {
+  color: black;
+}
+.profileStoryAuthor:visited {
+  color: black;
+}
+
+.profileStoryBody {
+  float: left;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  margin-left: 15px;
+}
+
+.profileStoryBody:hover {
+  cursor: default;
+}
+
+.profileStoryTable {
+  margin: 5px 0;
+}
+
+
+.fas.fa-plus-circle.fa-3x {
+  color: #926B2B;
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+
+.storyCommentsDiv {
+  margin-left: 5%;
+}
+
+.storyCommentsDiv>i {
+  margin-left: 6%;
+}
+
+.storyCommentsDiv>i>span {
+  color: #926b2bd8;
+}
+
+.fas.fa-plus-circle.fa-2x {
+  color: #926B2B;
+  /* width: 200px; */
+  margin-top: 40px;
+  margin-bottom: 70px;
+  margin-right: 15vw;
+}
+
+/* .fas.fa-plus-circle.fa-3x:active {
+  visibility: hidden;
+} */
+
+#newStory {
+  font-weight: 100;
+  font-size: 25px;
+  position: absolute;
+  margin-top: 9px;
+  margin-left: 15px;
+}
+
+#newStoryNav {
+  margin-right: 120px !important;
+}
+
+#newStoryNav>i>span {
+  color: #926b2bd8;
+}
+
+#newStoryNav:hover {
+  cursor: pointer;
+}
+
+#followDivContainer {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+
+#followDivContainer:hover {
+  cursor: default;
+}
+
+#followingSpan>a {
+  text-decoration: none;
+  color: #926B2B;
+}
+
+#followersSpan>a {
+  text-decoration: none;
+  color: #926B2B;
+}
+
+#followingSpan>a:active {
+  color: #926B2B;
+}
+
+#followingSpan>a:visited {
+  color: #926B2B;
+}
+
+#followingSpan>a:link {
+  color: #926B2B;
+}
+
+#followersSpan>a:active {
+  color: #926B2B;
+}
+
+#followersSpan>a:visited {
+  color: #926B2B;
+}
+
+#followersSpan>a:link {
+  color: #926B2B;
+}
