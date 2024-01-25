@@ -14,11 +14,9 @@ module.exports = (sequelize, DataTypes) => {
     {
       userId: {
         type: DataTypes.INTEGER,
-        allowNull: false,
       },
       storyId: {
         type: DataTypes.INTEGER,
-        allowNull: false,
       },
     },
     {
