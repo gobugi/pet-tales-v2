@@ -11,28 +11,28 @@ module.exports = {
     return queryInterface.bulkInsert(options, [
       {
         userId: 1,
-        storyId: 1,
+        storyId: 2,
         body: 'Awesome!',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         userId: 2,
-        storyId: 1,
+        storyId: 2,
         body: 'Breathtaking!',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         userId: 3,
-        storyId: 1,
+        storyId: 2,
         body: 'Amazing!',
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         userId: 4,
-        storyId: 1,
+        storyId: 2,
         body: 'Stunning!',
         createdAt: new Date(),
         updatedAt: new Date()
