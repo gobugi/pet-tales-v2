@@ -35,7 +35,7 @@ module.exports = {
       },
       {
         imageUrl: 'https://images.unsplash.com/photo-1567569548808-ccc1eca20644?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80',
-        authorId: 3,
+        authorId: 4,
         title: 'My cat got angry for tricking her into going to the vet...  Sorry.',
         body: 'Etiam erat velit scelerisque in dictum non consectetur. Senectus et netus et malesuada fames ac turpis egestas integer. Suspendisse faucibus interdum posuere lorem. At auctor urna nunc id cursus metus aliquam eleifend mi. Lorem sed risus ultricies tristique nulla aliquet enim tortor at. Ultrices neque ornare aenean euismod elementum nisi quis. Lacus viverra vitae congue eu consequat ac felis donec et. Semper auctor neque vitae tempus quam pellentesque nec. Felis eget velit aliquet sagittis id. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Felis donec et odio pellentesque diam volutpat. Interdum velit laoreet id donec ultrices. Urna id volutpat lacus laoreet non curabitur gravida arcu ac. Volutpat ac tincidunt vitae semper. Lacus suspendisse faucibus interdum posuere lorem. Ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget egestas. Quam id leo in vitae turpis.',
         createdAt: new Date(),
@@ -67,7 +67,7 @@ module.exports = {
       },
       {
         imageUrl: 'https://images.unsplash.com/photo-1517429481096-5bc77134f77c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1400&q=80',
-        authorId: 3,
+        authorId: 4,
         title: 'My cat watched Netflix with me on my tiny iPhone',
         body: 'Ultrices in iaculis nunc sed augue lacus viverra. In fermentum posuere urna nec tincidunt praesent. Eu ultrices vitae auctor eu augue ut lectus arcu bibendum. Sed lectus vestibulum mattis ullamcorper velit. At quis risus sed vulputate odio. Ligula ullamcorper malesuada proin libero nunc consequat interdum varius sit. Nunc vel risus commodo viverra maecenas accumsan lacus. Tortor aliquam nulla facilisi cras fermentum odio eu. At auctor urna nunc id cursus metus aliquam. Lacinia quis vel eros donec ac odio tempor orci. Dolor magna eget est lorem ipsum dolor sit. Rhoncus dolor purus non enim praesent elementum facilisis leo. Neque viverra justo nec ultrices dui sapien eget mi proin.',
         createdAt: new Date(),
