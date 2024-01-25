@@ -174,6 +174,6 @@ module.exports = {
 
   down: async (queryInterface, Sequelize) => {
     options.tableName = 'Stories';
-    return queryInterface.bulkDelete(options, null, { truncate: true, cascade: true, restartIdentity: true });
+    return queryInterface.bulkDelete(options, null, {});
   }
 };
