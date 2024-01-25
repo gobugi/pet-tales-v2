@@ -6,8 +6,8 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Story.belongsTo(models.User, { foreignKey: 'authorId' });
-      Story.hasMany(models.Comment, { foreignKey: 'storyId', onDelete: 'CASCADE', hooks: true });
-      Story.hasMany(models.Like, { foreignKey: 'storyId', onDelete: 'CASCADE', hooks: true });
+      // Story.hasMany(models.Comment, { foreignKey: 'storyId', onDelete: 'CASCADE', hooks: true });
+      // Story.hasMany(models.Like, { foreignKey: 'storyId', onDelete: 'CASCADE', hooks: true });
     }
   };
 
@@ -19,6 +19,7 @@ module.exports = (sequelize, DataTypes) => {
       },
       authorId: {
         type: DataTypes.INTEGER,
+        allowNull: false,
       },
       title: {
         type: DataTypes.STRING,
