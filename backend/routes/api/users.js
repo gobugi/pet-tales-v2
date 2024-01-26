@@ -1,7 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const asyncHandler = require('express-async-handler');
-const { check } = require('express-validator');
+const { check, body } = require('express-validator');
 const { handleValidationErrors } = require('../../utils/validation');
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
 const { User } = require('../../db/models');
@@ -13,6 +13,28 @@ const validateSignup = [
     .exists({ checkFalsy: true })
     .isEmail()
     .withMessage('Please provide a valid email.'),
+  body('email')
+    .custom(async value => {
+      const existingUser = await User.findOne({
+        where: {
+          email: value
+        }
+      })
+      if (existingUser) {
+        throw new Error('E-mail already in use');
+      }
+    }),
+  body('username')
+  .custom(async value => {
+    const existingUser = await User.findOne({
+      where: {
+        username: value
+      }
+    })
+    if (existingUser) {
+      throw new Error('Username already in use');
+    }
+  }),
   check('username')
     .exists({ checkFalsy: true })
     .isLength({ min: 4 })
@@ -31,11 +53,7 @@ const validateSignup = [
 // Sign up
 router.post(
   '/',
-  [
-    validateSignup,
-    check.query('username'),
-    check.query('email'),
-  ],
+  validateSignup,
   async (req, res) => {
     const { email, password, username } = req.body;
     const hashedPassword = bcrypt.hashSync(password);
