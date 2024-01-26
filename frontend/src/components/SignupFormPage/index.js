@@ -42,9 +42,6 @@ function SignupFormPage() {
   return (
     <div className='formContainer'>
       <form onSubmit={handleSubmit}>
-        <ul>
-          {errors.undefined}
-        </ul>
         <div>
           <label>
             Email
@@ -88,7 +85,10 @@ function SignupFormPage() {
               required
             />
           </label>
-          {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
+          <ul>
+            {errors.undefined}
+            {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
+          </ul>
         </div>
         <button type="submit">Sign Up</button>
       </form>
