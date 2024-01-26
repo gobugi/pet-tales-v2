@@ -31,7 +31,8 @@ const validateSignup = [
 // Sign up
 router.post(
   '/',
-  validateSignup, [
+  [
+    validateSignup,
     check.query('username'),
     check.query('email'),
   ],
