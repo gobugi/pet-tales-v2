@@ -188,14 +188,14 @@ const remFollow = async (e) => {
           document.getElementById("loggedOutEmptyHeart")?.setAttribute("style","display:none;");
         }
 
-      if (sessionUser === undefined && !currStoryLikesArr?.length) {
+      if (sessionUser === null && !currStoryLikesArr?.length) {
         document.getElementById("loggedOutEmptyHeart")?.setAttribute("style","display:block;");
         document.getElementById("loggedOutFullHeart")?.setAttribute("style","display:none;");
         document.getElementById("loggedFullHeart")?.setAttribute("style","display:none;");
         document.getElementById("loggedEmptyHeart")?.setAttribute("style","display:none;");
       }
 
-      if (sessionUser === undefined && currStoryLikesArr?.length) {
+      if (sessionUser === null && currStoryLikesArr?.length) {
         document.getElementById("loggedOutFullHeart")?.setAttribute("style","display:block;");
         document.getElementById("loggedOutEmptyHeart")?.setAttribute("style","display:none;");
         document.getElementById("loggedFullHeart")?.setAttribute("style","display:none;");
@@ -268,14 +268,14 @@ const remFollow = async (e) => {
           document.getElementById("loggedOutEmptyHeart")?.setAttribute("style","display:none;");
         }
 
-      if (sessionUser === undefined && !currStoryLikesArr?.length) {
+      if (sessionUser === null && !currStoryLikesArr?.length) {
         document.getElementById("loggedOutEmptyHeart")?.setAttribute("style","display:block;");
         document.getElementById("loggedOutFullHeart")?.setAttribute("style","display:none;");
         document.getElementById("loggedFullHeart")?.setAttribute("style","display:none;");
         document.getElementById("loggedEmptyHeart")?.setAttribute("style","display:none;");
       }
 
-      if (sessionUser === undefined && currStoryLikesArr?.length) {
+      if (sessionUser === null && currStoryLikesArr?.length) {
         document.getElementById("loggedOutFullHeart")?.setAttribute("style","display:block;");
         document.getElementById("loggedOutEmptyHeart")?.setAttribute("style","display:none;");
         document.getElementById("loggedFullHeart")?.setAttribute("style","display:none;");
@@ -330,14 +330,14 @@ const remFollow = async (e) => {
           document.getElementById("loggedOutEmptyHeart")?.setAttribute("style","display:none;");
         }
 
-      if (sessionUser === undefined && !currStoryLikesArr?.length) {
+      if (sessionUser === null && !currStoryLikesArr?.length) {
         document.getElementById("loggedOutEmptyHeart")?.setAttribute("style","display:block;");
         document.getElementById("loggedOutFullHeart")?.setAttribute("style","display:none;");
         document.getElementById("loggedFullHeart")?.setAttribute("style","display:none;");
         document.getElementById("loggedEmptyHeart")?.setAttribute("style","display:none;");
       }
 
-      if (sessionUser === undefined && currStoryLikesArr?.length) {
+      if (sessionUser === null && currStoryLikesArr?.length) {
         document.getElementById("loggedOutFullHeart")?.setAttribute("style","display:block;");
         document.getElementById("loggedOutEmptyHeart")?.setAttribute("style","display:none;");
         document.getElementById("loggedFullHeart")?.setAttribute("style","display:none;");
