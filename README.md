@@ -1,8 +1,8 @@
-# Welcome to Pet-Tales! &nbsp;<a href="https://pet-tales.herokuapp.com/"><img src="https://raw.githubusercontent.com/gobugi/pet-tales/main/frontend/public/favicon.ico" width="40" height="40"/></a>
+# Welcome to Pet-Tales! &nbsp;<a href="https://pet-tales.onrender.com/"><img src="https://raw.githubusercontent.com/gobugi/pet-tales/main/frontend/public/favicon.ico" width="40" height="40"/></a>
 
 Pet-Tales is the perfect place for pet-lovers everywhere to share and comment on fun stories about their pets. 
 
-Live Link: [Pet-Tales](https://pet-tales.herokuapp.com/)
+Live Link: [Pet-Tales](https://pet-tales.onrender.com/)
 
 
 ## Pet-Tales at a Glance
