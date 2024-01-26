@@ -8,7 +8,7 @@ function DemoLogin() {
   const dispatch = useDispatch();
   const sessionUser = useSelector((state) => state.session.user);
   const [credential, setCredential] = useState("demo@user.io");
-  const [password, setPassword] = useState("4score7yearsagopw");
+  const [password, setPassword] = useState("password");
   const [errors, setErrors] = useState({});
 
   if (sessionUser) return (
