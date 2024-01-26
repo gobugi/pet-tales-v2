@@ -6,10 +6,10 @@ import './DemoLogin.css';
 
 function DemoLogin() {
   const dispatch = useDispatch();
-  const sessionUser = useSelector(state => state.session.user);
-  // const [credential, setCredential] = useState('');
-  // const [password, setPassword] = useState('');
-  // const [errors, setErrors] = useState([]);
+  const sessionUser = useSelector((state) => state.session.user);
+  const [credential, setCredential] = useState("demo@user.io");
+  const [password, setPassword] = useState("4score7yearsagopw");
+  // const [errors, setErrors] = useState({});
 
   if (sessionUser) return (
     <Redirect to={`/users/${sessionUser.id}`} />
@@ -17,27 +17,26 @@ function DemoLogin() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // setErrors([]);
-    return dispatch(sessionActions.login({ credential: "demo@user.io", password: "4score7yearsagopw" }))
-      // .catch(async (res) => {
-      //   const data = await res.json();
-      //   if (data && data.errors) setErrors(data.errors);
-      // });
-  }
+    // setErrors({});
+    return dispatch(sessionActions.login({ credential, password }))
+    // .catch(
+    //   async (res) => {
+    //     const data = await res.json();
+    //     if (data && data.errors) setErrors(data.errors);
+    //   }
+    // );
+  };
 
   return (
     <div className='formContainer'>
       <form onSubmit={handleSubmit}>
-        {/* <ul>
-          {errors.map((error, idx) => <li key={idx}>{error}</li>)}
-        </ul> */}
         <div>
           <label>
-            Username or Email
+            Email
             <input
               type="text"
-              // value={credential}
-              defaultValue="demo@user.io"
+              value={credential}
+              defaultValue={credential}
               // onChange={(e) => setCredential(e.target.value)}
               required
             />
@@ -48,8 +47,8 @@ function DemoLogin() {
             Password
             <input
               type="password"
-              // value={password}
-              defaultValue="4score7yearsagopw"
+              value={password}
+              defaultValue={password}
               // onChange={(e) => setPassword(e.target.value)}
               required
             />
