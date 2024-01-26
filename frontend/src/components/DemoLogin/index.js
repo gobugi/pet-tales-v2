@@ -9,7 +9,7 @@ function DemoLogin() {
   const sessionUser = useSelector((state) => state.session.user);
   const [credential, setCredential] = useState("demo@user.io");
   const [password, setPassword] = useState("4score7yearsagopw");
-  // const [errors, setErrors] = useState({});
+  const [errors, setErrors] = useState({});
 
   if (sessionUser) return (
     <Redirect to={`/users/${sessionUser.id}`} />
@@ -17,14 +17,14 @@ function DemoLogin() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // setErrors({});
+    setErrors({});
     return dispatch(sessionActions.login({ credential, password }))
-    // .catch(
-    //   async (res) => {
-    //     const data = await res.json();
-    //     if (data && data.errors) setErrors(data.errors);
-    //   }
-    // );
+    .catch(
+      async (res) => {
+        const data = await res.json();
+        if (data && data.errors) setErrors(data.errors);
+      }
+    );
   };
 
   return (
@@ -32,11 +32,11 @@ function DemoLogin() {
       <form onSubmit={handleSubmit}>
         <div>
           <label>
-            Email
+            Username or Email
             <input
               type="text"
               value={credential}
-              defaultValue={credential}
+              placeholder={credential}
               // onChange={(e) => setCredential(e.target.value)}
               required
             />
@@ -48,11 +48,12 @@ function DemoLogin() {
             <input
               type="password"
               value={password}
-              defaultValue={password}
+              placeholder={password}
               // onChange={(e) => setPassword(e.target.value)}
               required
             />
           </label>
+          {errors.credential && <p>{errors.credential}</p>}
         </div>
         <button type="submit">Log In</button>
       </form>

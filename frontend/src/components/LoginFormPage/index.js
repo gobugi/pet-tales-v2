@@ -32,7 +32,7 @@ function LoginFormPage() {
       <form onSubmit={handleSubmit}>
         <div>
           <label>
-            Email
+            Username or Email
             <input
               type="text"
               value={credential}

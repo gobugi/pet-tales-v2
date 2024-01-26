@@ -1,11 +1,14 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
+import { NavLink, useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import * as sessionActions from '../../store/session';
+// import { Redirect } from 'react-router-dom';
 
 function ProfileButton({ user }) {
+  const history = useHistory();
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
-  const ulRef = useRef();
+
 
   const openMenu = () => {
     if (showMenu) return;
@@ -15,10 +18,8 @@ function ProfileButton({ user }) {
   useEffect(() => {
     if (!showMenu) return;
 
-    const closeMenu = (e) => {
-      if (!ulRef.current.contains(e.target)) {
-        setShowMenu(false);
-      }
+    const closeMenu = () => {
+      setShowMenu(false);
     };
 
     document.addEventListener('click', closeMenu);
@@ -29,25 +30,44 @@ function ProfileButton({ user }) {
   const logout = (e) => {
     e.preventDefault();
     dispatch(sessionActions.logout());
+    window.location.href = "/";
   };
 
-  const ulClassName = "profile-dropdown" + (showMenu ? "" : " hidden");
+  const redirectHome = (e) => {
+    history.push("/");
+
+  }
+
+  const logoutAndRedirect = (e) => {
+    e.preventDefault();
+    logout(e);
+    redirectHome();
+  }
+
 
   return (
     <>
-      <button onClick={openMenu}>
-        <i className="fas fa-user-circle" />
-      </button>
-      <ul className={ulClassName} ref={ulRef}>
-        <li>{user.username}</li>
-        <li>{user.firstName} {user.lastName}</li>
-        <li>{user.email}</li>
-        <li>
-          <button onClick={logout}>Log Out</button>
-        </li>
-      </ul>
+      <i onClick={openMenu} className="fas fa-user-circle fa-3x"></i>
+      {showMenu && (
+        <div>
+          <ul className="profile-dropdown" style={{listStyleType: 'none'}}>
+            <li key={user.id}>
+              <a style={{textDecoration: 'none'}} href={`/users/${user.id}`}>{user.username}</a>
+            </li>
+            <li key={user.email}>{user.email}</li>
+            <li key={user.username}>
+              <button key={`${user.id}logoutButton`} className="logoutButton" onClick={logoutAndRedirect}>
+                <i key={`${user.id}logout`} className="fas fa-sign-out-alt"></i> Log Out
+              </button>
+            </li>
+          </ul>
+        </div>
+      )}
     </>
   );
 }
+
+
+
 
 export default ProfileButton;
