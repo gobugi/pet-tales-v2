@@ -6,13 +6,13 @@ import './index.css';
 import App from './App';
 import configureStore from './store';
 import { restoreCSRF, csrfFetch } from './store/csrf';
+
 import * as sessionActions from './store/session';
 import * as userActions from './store/users';
 import * as storyActions from './store/stories';
 import * as commentActions from './store/comments';
 
 const store = configureStore();
-
 
 if (process.env.NODE_ENV !== 'production') {
   restoreCSRF();
@@ -24,7 +24,6 @@ if (process.env.NODE_ENV !== 'production') {
   window.storyActions = storyActions;
   window.commentActions = commentActions;
 }
-
 
 function Root() {
   return (

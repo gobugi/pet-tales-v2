@@ -1,5 +1,6 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
+const asyncHandler = require('express-async-handler');
 const { check } = require('express-validator');
 const { handleValidationErrors } = require('../../utils/validation');
 const { setTokenCookie, requireAuth } = require('../../utils/auth');
@@ -49,5 +50,30 @@ router.post(
     });
   }
 );
+
+//Get a user
+
+router.get('/:id(\\d+)', asyncHandler(async(req, res) => {
+  const id = req.params.id;
+  const user = await User.findByPk(id)
+  res.json(user)
+}));
+
+// Get Users
+
+router.get('/', asyncHandler(async (req, res) => {
+  const users = await User.findAll();
+  res.json(users);
+}));
+
+
+// Get Stories for a User
+router.get('/:id(\\d+)/stories/', asyncHandler(async (req, res) => {
+  const id = req.params.id;
+  const stories = await Story.findAll({
+    where: { authorId: +id }
+  });
+  res.json(stories);
+}));
 
 module.exports = router;

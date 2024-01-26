@@ -18,7 +18,7 @@ function DemoLogin() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // setErrors([]);
-    return dispatch(sessionActions.login({ credential: "demo@user.io", password: "password" }))
+    return dispatch(sessionActions.login({ credential: "demo@user.io", password: "4score7yearsagopw" }))
       // .catch(async (res) => {
       //   const data = await res.json();
       //   if (data && data.errors) setErrors(data.errors);
@@ -49,7 +49,7 @@ function DemoLogin() {
             <input
               type="password"
               // value={password}
-              defaultValue="password"
+              defaultValue="4score7yearsagopw"
               // onChange={(e) => setPassword(e.target.value)}
               required
             />
