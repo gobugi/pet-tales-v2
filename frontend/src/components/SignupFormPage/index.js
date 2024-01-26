@@ -85,10 +85,10 @@ function SignupFormPage() {
               required
             />
           </label>
-          <ul>
+          <p>
             {errors.undefined}
             {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
-          </ul>
+          </p>
         </div>
         <button type="submit">Sign Up</button>
       </form>
