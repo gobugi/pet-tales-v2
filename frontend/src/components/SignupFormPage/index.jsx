@@ -13,9 +13,7 @@ function SignupFormPage() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState({});
 
-  if (sessionUser) return (
-    <Redirect to={`/users/${sessionUser.id}`} />
-  );
+  if (sessionUser) return <Redirect to={`/users/${sessionUser.id}`} />;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,12 +33,12 @@ function SignupFormPage() {
       });
     }
     return setErrors({
-      confirmPassword: "Passwords must match"
+      confirmPassword: "Passwords must match",
     });
   };
 
   return (
-    <div className='formContainer'>
+    <div className="formContainer">
       <form onSubmit={handleSubmit}>
         <div>
           <label>

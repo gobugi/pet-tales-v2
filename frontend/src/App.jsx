@@ -2,17 +2,17 @@ import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useLocation } from "react-router";
 import { Route, Switch } from "react-router-dom";
-import LoginFormPage from "./components/LoginFormPage";
-import SignupFormPage from "./components/SignupFormPage";
-import * as sessionActions from "./store/session";
-import Navigation from "./components/Navigation";
-import HomePage from './components/HomePage';
-import StoryFormPage from './components/StoryFormPage';
-import ProfilePage from './components/ProfilePage';
-import StoryPage from './components/StoryPage';
-import EditStoryForm from './components/EditStoryForm';
-import EditCommentForm from './components/EditCommentForm';
-import DemoLogin from './components/DemoLogin';
+import LoginFormPage from "@/components/LoginFormPage";
+import SignupFormPage from "@/components/SignupFormPage";
+import * as sessionActions from "@/store/session";
+import Navigation from "@/components/Navigation";
+import HomePage from '@/components/HomePage';
+import StoryFormPage from '@/components/StoryFormPage';
+import ProfilePage from '@/components/ProfilePage';
+import StoryPage from '@/components/StoryPage';
+import EditStoryForm from '@/components/EditStoryForm';
+import EditCommentForm from '@/components/EditCommentForm';
+import DemoLogin from '@/components/DemoLogin';
 
 
 

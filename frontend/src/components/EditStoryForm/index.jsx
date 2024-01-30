@@ -1,38 +1,35 @@
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useHistory, useLocation, NavLink } from 'react-router-dom';
-import { getStories, editStory } from '../../store/stories';
-import { restoreUser } from '../../store/session';
-import './EditStoryForm.css';
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory, useLocation, NavLink } from "react-router-dom";
+import { getStories, editStory } from "../../store/stories";
+import { restoreUser } from "../../store/session";
+import "./EditStoryForm.css";
 
 const EditStoryForm = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const location = useLocation();
 
+  const sessionUser = useSelector((state) => state.session.user);
 
-  const sessionUser = useSelector(state => state.session.user);
-
-  const pathUrl = window.location?.pathname.split('/');
+  const pathUrl = window.location?.pathname.split("/");
   const storyId = pathUrl[pathUrl.length - 2];
 
   const stories = useSelector((state) => state.stories);
   const storiesArr = Object.values(stories);
 
-  const currentStory = storiesArr.find(story => {
-    return story?.id === +storyId
+  const currentStory = storiesArr.find((story) => {
+    return story?.id === +storyId;
   });
   const currentTitle = currentStory?.title;
   const currentImageUrl = currentStory?.imageUrl;
   const currentBody = currentStory?.body;
   const currentAuthorId = currentStory?.authorId;
 
-
   const [title, setTitle] = useState(currentTitle);
   const [imageUrl, setImageUrl] = useState(currentImageUrl);
   const [body, setBody] = useState(currentBody);
   const [authorId, setAuthorId] = useState(currentAuthorId);
-
 
   const updateTitle = (e) => setTitle(e.target.value);
   const updateImageUrl = (e) => setImageUrl(e.target.value);
@@ -53,18 +50,17 @@ const EditStoryForm = () => {
       imageUrl,
       body,
       authorId,
-      id: storyId
-    }
+      id: storyId,
+    };
 
     if (editedStory) {
-      dispatch(editStory(editedStory, +storyId))
+      dispatch(editStory(editedStory, +storyId));
       history.push(`/stories/${storyId}`);
     }
   };
 
-
   return (
-    <div className='formContainer'>
+    <div className="formContainer">
       <form onSubmit={handleSubmit}>
         <div>
           <label>
@@ -92,7 +88,7 @@ const EditStoryForm = () => {
         </div>
         <div>
           <label>
-          New story
+            New story
             <textarea
               defaultValue={currentBody}
               onChange={updateBody}
@@ -103,15 +99,13 @@ const EditStoryForm = () => {
             />
           </label>
         </div>
-        <NavLink to={`/stories/${storyId}`} className='cancelButton'>
+        <NavLink to={`/stories/${storyId}`} className="cancelButton">
           <button>Cancel</button>
         </NavLink>
         <button type="submit">Save</button>
       </form>
     </div>
   );
-}
-
-
+};
 
 export default EditStoryForm;

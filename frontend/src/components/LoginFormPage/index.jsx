@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect, NavLink } from 'react-router-dom';
+import { Redirect, NavLink } from "react-router-dom";
 import "./LoginForm.css";
 
 function LoginFormPage() {
@@ -11,10 +11,7 @@ function LoginFormPage() {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
 
-  if (sessionUser) return (
-    <Redirect to={`/users/${sessionUser.id}`} />
-  );
-  
+  if (sessionUser) return <Redirect to={`/users/${sessionUser.id}`} />;
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -28,7 +25,7 @@ function LoginFormPage() {
   };
 
   return (
-    <div className='formContainer'>
+    <div className="formContainer">
       <form onSubmit={handleSubmit}>
         <div>
           <label>

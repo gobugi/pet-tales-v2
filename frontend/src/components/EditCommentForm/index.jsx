@@ -1,20 +1,19 @@
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useHistory, useLocation, NavLink } from 'react-router-dom';
-import { getComments, editComment, getComment } from '../../store/comments';
-import { getStories } from '../../store/stories';
-import { restoreUser } from '../../store/session';
-import './EditCommentForm.css';
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory, useLocation, NavLink } from "react-router-dom";
+import { getComments, editComment, getComment } from "../../store/comments";
+import { getStories } from "../../store/stories";
+import { restoreUser } from "../../store/session";
+import "./EditCommentForm.css";
 
 const EditCommentForm = () => {
   const dispatch = useDispatch();
   const history = useHistory();
   const location = useLocation();
 
+  const sessionUser = useSelector((state) => state.session.user);
 
-  const sessionUser = useSelector(state => state.session.user);
-
-  const pathUrl = window.location?.pathname.split('/');
+  const pathUrl = window.location?.pathname.split("/");
   const commentId = pathUrl[pathUrl.length - 2];
 
   const comments = useSelector((state) => state.comments);
@@ -23,31 +22,25 @@ const EditCommentForm = () => {
   const stories = useSelector((state) => state.stories);
   const storiesArr = Object.values(stories);
 
-
-  const currentComment = commentsArr.find(comment => {
-    return comment?.id === +commentId
+  const currentComment = commentsArr.find((comment) => {
+    return comment?.id === +commentId;
   });
 
   const currentUserId = currentComment?.userId;
   const currentStoryId = currentComment?.storyId;
   const currentBody = currentComment?.body;
 
-
-  const currentStory = storiesArr.find(story => {
-    return story?.id === currentStoryId
+  const currentStory = storiesArr.find((story) => {
+    return story?.id === currentStoryId;
   });
-
-
 
   const [userId, setUserId] = useState(currentUserId);
   const [storyId, setStoryId] = useState(currentStoryId);
   const [body, setBody] = useState(currentBody);
 
-
   const updateUserId = (e) => setUserId(e.target.value);
   const updateStoryId = (e) => setStoryId(e.target.value);
   const updateBody = (e) => setBody(e.target.value);
-
 
   useEffect(() => {
     dispatch(getComments());
@@ -65,19 +58,19 @@ const EditCommentForm = () => {
       userId,
       storyId,
       body,
-      id: commentId
-    }
+      id: commentId,
+    };
 
     if (editedComment) {
-      dispatch(editComment(editedComment, +commentId))
+      dispatch(editComment(editedComment, +commentId));
       history.push(`/stories/${currentStoryId}`);
     }
   };
 
-  console.log(currentStoryId)
+  console.log(currentStoryId);
 
   return (
-    <div className='formContainer'>
+    <div className="formContainer">
       <form onSubmit={handleSubmit}>
         {/* <div>
           <label>
@@ -105,7 +98,7 @@ const EditCommentForm = () => {
         </div> */}
         <div>
           <label>
-          Comment
+            Comment
             <textarea
               defaultValue={currentBody}
               onChange={updateBody}
@@ -117,12 +110,12 @@ const EditCommentForm = () => {
           </label>
         </div>
         <button type="submit">Save</button>
-        <NavLink to={`/stories/${currentStoryId}`} className='cancelButton'>
+        <NavLink to={`/stories/${currentStoryId}`} className="cancelButton">
           <button>Cancel</button>
         </NavLink>
       </form>
     </div>
   );
-}
+};
 
 export default EditCommentForm;

@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector  } from 'react-redux';
-import { postStory } from '../../store/stories';
-import { getUsers } from '../../store/users';
-import { restoreUser } from '../../store/session';
-import { useHistory, NavLink } from 'react-router-dom';
+import { useDispatch, useSelector } from "react-redux";
+import { postStory } from "../../store/stories";
+import { getUsers } from "../../store/users";
+import { restoreUser } from "../../store/session";
+import { useHistory, NavLink } from "react-router-dom";
 
-import './StoryFormPage.css';
+import "./StoryFormPage.css";
 
 const StoryFormPage = () => {
-
   const dispatch = useDispatch();
   const history = useHistory();
 
-  const [title, setTitle] = useState('');
-  const [imageUrl, setImageUrl] = useState('');
-  const [body, setBody] = useState('');
+  const [title, setTitle] = useState("");
+  const [imageUrl, setImageUrl] = useState("");
+  const [body, setBody] = useState("");
   const [authorId, setAuthorId] = useState(``);
 
   const updateTitle = (e) => setTitle(e.target.value);
@@ -22,8 +21,7 @@ const StoryFormPage = () => {
   const updateBody = (e) => setBody(e.target.value);
   const updateAuthorId = (e) => setAuthorId(e.target.value);
 
-  const sessionUser = useSelector(state => state.session.user);
-
+  const sessionUser = useSelector((state) => state.session.user);
 
   // useEffect(() => {
   //   dispatch(postStory());
@@ -35,15 +33,15 @@ const StoryFormPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    let createdStory
+    let createdStory;
     createdStory = {
       authorId: sessionUser?.id,
       imageUrl,
       title,
       body,
-    }
+    };
 
-    const newStory = await dispatch(postStory(createdStory))
+    const newStory = await dispatch(postStory(createdStory));
     if (newStory) {
       history.push(`/users/${sessionUser?.id}`);
     }
@@ -52,7 +50,7 @@ const StoryFormPage = () => {
   // console.log(newStory);
 
   return (
-    <div className='formContainer'>
+    <div className="formContainer">
       <form onSubmit={handleSubmit}>
         <div>
           <label>
@@ -80,7 +78,7 @@ const StoryFormPage = () => {
         </div>
         <div>
           <label>
-          New story
+            New story
             <textarea
               value={body}
               onChange={(e) => setBody(e.target.value)}
@@ -110,6 +108,6 @@ const StoryFormPage = () => {
       </form>
     </div>
   );
-}
+};
 
 export default StoryFormPage;
